@@ -30,3 +30,9 @@ class ProductPage(BasePage):
         product_price = self.browser.find_element(*ProductPageLocators.PRODUCT_PRICE)
         cart_amount = self.browser.find_element(*ProductPageLocators.CART_AMOUNT)
         assert product_price.text == cart_amount.text, "Product price and cart amount is not the same"
+
+    def should_not_be_success_msg(self):
+        assert self.is_not_element_present(*ProductPageLocators.SUCCESS_MSG_OF_ADDED_PRODUCT), "Success msg is present"
+
+    def should_disappered_success_msg(self):
+        assert self.is_disappeared(*ProductPageLocators.SUCCESS_MSG_OF_ADDED_PRODUCT), "Success msg is not disappeared"
