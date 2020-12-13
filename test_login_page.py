@@ -1,4 +1,4 @@
-from stepik_selenium_python_final_project.pages import LoginPage
+from pages.login_page import LoginPage
 
 
 def test_guest_user_should_see_login_form(browser):

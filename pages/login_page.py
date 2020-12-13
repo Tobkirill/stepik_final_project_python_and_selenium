@@ -1,5 +1,5 @@
-from stepik_selenium_python_final_project.pages import BasePage
-from stepik_selenium_python_final_project.pages.locators import LoginPageLocators
+from pages.base_page import BasePage
+from pages.locators import LoginPageLocators
 
 
 class LoginPage(BasePage):

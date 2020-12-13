@@ -1,5 +1,5 @@
-from stepik_python_selenium_final.pages.main_page import MainPage
-from stepik_python_selenium_final.test_login_page import LoginPage
+from pages.main_page import MainPage
+from pages.login_page import LoginPage
 
 
 def test_guest_can_go_to_login_page(browser):

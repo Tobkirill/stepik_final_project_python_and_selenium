@@ -1,4 +1,4 @@
-from stepik_selenium_python_final_project.pages import BasePage
+from pages.base_page import BasePage
 from locators import MainPageLocators
 
 
