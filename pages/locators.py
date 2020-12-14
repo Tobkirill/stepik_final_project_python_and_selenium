@@ -19,6 +19,12 @@ class ProductPageLocators:
     PRODUCT_PRICE = (By.CSS_SELECTOR, '.product_main>.price_color')
 
 
-class BasePageLocators():
+class BasePageLocators:
     LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
     LOGIN_LINK_INVALID = (By.CSS_SELECTOR, "#login_link_inc")
+    SHOW_CART_BUTTON = (By.CSS_SELECTOR, '.btn-group>.btn-default')
+
+
+class ShoppingCart:
+    SHOPPING_CART_SUMMARY = (By.CSS_SELECTOR, '#basket_formset')
+    SHOPPING_CART_IS_EMPTY_MSG = (By.CSS_SELECTOR, '#content_inner>p')
