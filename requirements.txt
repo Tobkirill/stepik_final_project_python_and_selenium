@@ -10,3 +10,5 @@ pytest==6.2.0
 selenium==3.141.0
 toml==0.10.2
 urllib3==1.26.2
+
+Faker~=5.0.1

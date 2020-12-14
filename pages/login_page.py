@@ -1,8 +1,22 @@
 from pages.base_page import BasePage
 from pages.locators import LoginPageLocators
+import faker
 
 
 class LoginPage(BasePage):
+    def register_new_user(self):
+        f = faker.Faker()
+        email = f.email()
+        email_for_reg = self.browser.find_element(*LoginPageLocators.EMAIL_FOR_REG)
+        email_for_reg.send_keys(email)
+        password_for_reg = self.browser.find_element(*LoginPageLocators.PASSWORD_FOR_REG)
+        password_for_reg.send_keys("Tduyrhdfk123")
+        repeat_password_reg = self.browser.find_element(*LoginPageLocators.REPEAT_PASSWORD_REG)
+        repeat_password_reg.send_keys("Tduyrhdfk123")
+        register_button = self.browser.find_element(*LoginPageLocators.REGISTER_BUTTON)
+        register_button.click()
+
+
     def should_be_login_page(self):
         self.should_be_login_url()
         self.should_be_login_form()
